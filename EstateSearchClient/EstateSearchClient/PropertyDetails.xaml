@@ -1,0 +1,25 @@
+﻿<Window x:Class="EstateSearchClient.PropertyDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Property Details" Height="394.506" Width="509.89"
+        ResizeMode="CanMinimize">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="504">
+            <TabItem Header="Property">
+                <Grid Background="#FFE5E5E5" Width="494" Margin="0,0,0,-1">
+                    <StackPanel HorizontalAlignment="Left" Height="112" Margin="10,207,0,0" VerticalAlignment="Top" Width="474">
+                        <TextBox HorizontalAlignment="Left" Height="112" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" IsReadOnly="True" />
+                    </StackPanel>
+                    <Label Content="Property description" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="furnished" HorizontalAlignment="Left" Margin="383,51,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="primary market" HorizontalAlignment="Left" Margin="383,72,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="idText" HorizontalAlignment="Left" Margin="383,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Agent">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

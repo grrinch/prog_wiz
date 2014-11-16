@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Estate" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEstate_echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:echo" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:echoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_test_InputMessage">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetAllEstates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstates" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetAllEstates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstateById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstateById" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstateById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstateByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByAgentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByAgentId" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByAgentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByAgentIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByAgentName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByAgentName" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByAgentName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByAgentNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByCityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByCityId" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByCityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByCityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByCityName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByCityName" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstatesByCityName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesByCityNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgents" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstates" />
+  </wsdl:message>
+  <wsdl:message name="IEstate_GetEstates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstatesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEstate">
+    <wsdl:operation name="echo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/echo" message="tns:IEstate_echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/echoResponse" message="tns:IEstate_echo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/test" message="tns:IEstate_test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/testResponse" message="tns:IEstate_test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEstates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetAllEstates" message="tns:IEstate_GetAllEstates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetAllEstatesResponse" message="tns:IEstate_GetAllEstates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstateById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetEstateById" message="tns:IEstate_GetEstateById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetEstateByIdResponse" message="tns:IEstate_GetEstateById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByAgentId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetEstatesByAgentId" message="tns:IEstate_GetEstatesByAgentId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetEstatesByAgentIdResponse" message="tns:IEstate_GetEstatesByAgentId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByAgentName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetEstatesByAgentName" message="tns:IEstate_GetEstatesByAgentName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetEstatesByAgentNameResponse" message="tns:IEstate_GetEstatesByAgentName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByCityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetEstatesByCityId" message="tns:IEstate_GetEstatesByCityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetEstatesByCityIdResponse" message="tns:IEstate_GetEstatesByCityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByCityName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetEstatesByCityName" message="tns:IEstate_GetEstatesByCityName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetEstatesByCityNameResponse" message="tns:IEstate_GetEstatesByCityName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetCities" message="tns:IEstate_GetCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetCitiesResponse" message="tns:IEstate_GetCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetAgents" message="tns:IEstate_GetAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetAgentsResponse" message="tns:IEstate_GetAgents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstate/GetEstates" message="tns:IEstate_GetEstates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstate/GetEstatesResponse" message="tns:IEstate_GetEstates_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEstate" type="tns:IEstate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="echo">
+      <soap:operation soapAction="http://tempuri.org/IEstate/echo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/IEstate/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEstates">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetAllEstates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstateById">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetEstateById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByAgentId">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetEstatesByAgentId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByAgentName">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetEstatesByAgentName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByCityId">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetEstatesByCityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstatesByCityName">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetEstatesByCityName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetAgents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstates">
+      <soap:operation soapAction="http://tempuri.org/IEstate/GetEstates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Estate">
+    <wsdl:port name="BasicHttpBinding_IEstate" binding="tns:BasicHttpBinding_IEstate">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Estate_Server/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
