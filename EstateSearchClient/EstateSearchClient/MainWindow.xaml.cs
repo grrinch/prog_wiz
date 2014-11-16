@@ -31,14 +31,16 @@ namespace EstateSearchClient
             InitializeComponent();
             getAllButton.Background = Brushes.Green;
             showSelectedButton.Background = Brushes.Blue;
-            cityNameCombo.SelectionChanged += new SelectionChangedEventHandler(agentNameComboBoxChanged);
+            cityNameCombo.SelectionChanged += new SelectionChangedEventHandler(cityNameComboBoxChanged);
+            agentNameCombo.SelectionChanged += new SelectionChangedEventHandler(agentNameComboBoxChanged);
             cl = new Est.EstateClient();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var propertyDetails = new PropertyDetails();
-            DataRow dr = (DataRow) ggrrr.SelectedItem;
+            
+            DataRowView dr = (DataRowView) ggrrr.SelectedItem;
             Int32 id = Int32.Parse(dr["ID"].ToString());
 
             getDetailsForPopup(propertyDetails, id);
@@ -53,7 +55,7 @@ namespace EstateSearchClient
 
         private async void getDetailsForPopup(PropertyDetails popup, Int32 id)
         {
-            DataTable property = XmlStringToDataTable(await cl.GetAllEstatesAsync());
+            DataTable property = XmlStringToDataTable(await cl.GetEstateByIdAsync(id));
 
             popup.setDetails(property);
         }
@@ -100,10 +102,17 @@ namespace EstateSearchClient
 
         }
 
-        private async void agentNameComboBoxChanged(object sender, SelectionChangedEventArgs e)
+        private async void cityNameComboBoxChanged(object sender, SelectionChangedEventArgs e)
         {
             int CityId = (sender as ComboBox).SelectedIndex;
             DataTable dt = XmlStringToDataTable(await cl.GetEstatesByCityIdAsync(CityId));
+            BindDataGridView(ggrrr, dt);
+        }
+
+        private async void agentNameComboBoxChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int agentId = (sender as ComboBox).SelectedIndex;
+            DataTable dt = XmlStringToDataTable(await cl.GetEstatesByAgentIdAsync(agentId));
             BindDataGridView(ggrrr, dt);
         }
 

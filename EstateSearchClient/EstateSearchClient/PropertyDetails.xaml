@@ -4,20 +4,51 @@
         Title="Property Details" Height="394.506" Width="509.89"
         ResizeMode="CanMinimize">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="504">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="311*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="504" Grid.ColumnSpan="5">
             <TabItem x:Name="propertyDetailsTab" Header="Property">
                 <Grid Background="#FFE5E5E5" Width="494" Margin="0,0,0,-1">
                     <StackPanel HorizontalAlignment="Left" Height="112" Margin="10,207,0,0" VerticalAlignment="Top" Width="474">
-                        <TextBox HorizontalAlignment="Left" Height="112" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" IsReadOnly="True" />
+                        <TextBox x:Name="propertyDescriptionTextBox" HorizontalAlignment="Left" Height="112" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" IsReadOnly="True" />
                     </StackPanel>
-                    <Label Content="Property description" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="furnished" HorizontalAlignment="Left" Margin="383,51,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="primary market" HorizontalAlignment="Left" Margin="383,72,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Opis nieruchomości" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <CheckBox x:Name="furnishedCheckBox" Content="umeblowanie" HorizontalAlignment="Left" Margin="383,51,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="marketCheckBox" Content="rynek pierwotny" HorizontalAlignment="Left" Margin="383,72,0,0" VerticalAlignment="Top" />
                     <TextBlock x:Name="idText" HorizontalAlignment="Left" Margin="383,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
+                    <Label Content="Powierzchnia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Pokoi" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Pięter" HorizontalAlignment="Left" Margin="139,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Typ nieruchomości" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="areaTextBox" HorizontalAlignment="Left" Margin="16,36,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock x:Name="bedroomTextBox" HorizontalAlignment="Left" Margin="99,36,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock x:Name="floorsTextBox" HorizontalAlignment="Left" Margin="144,36,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock x:Name="typeTextBox" HorizontalAlignment="Left" Margin="189,36,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Rodzaj oferty" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Adres" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock x:Name="offerTextBox" HorizontalAlignment="Left" Margin="24,88,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock x:Name="streetTextBox" HorizontalAlignment="Left" Margin="24,135,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="cityTextBox" HorizontalAlignment="Left" Margin="24,151,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="countryTextBox" HorizontalAlignment="Left" Margin="24,167,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="priceTextBox" HorizontalAlignment="Right" Margin="0,109,46,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"  Text="{Binding StringFormat={}{0:C}}" />
+                    <Label Content="ID:" HorizontalAlignment="Left" Margin="354,7,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="agentDetailsTab" Header="Agent">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="agentNameTextBox" Content="Label" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           />
+                    <CheckBox x:Name="agentSecureCheckBox" Content="Agent zaufany?" HorizontalAlignment="Left" Margin="386,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Adres" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="agentAddressTextBox" HorizontalAlignment="Left" Height="172" Margin="10,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="474" IsReadOnly="True"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
