@@ -4,3 +4,9 @@ c:\users\admin\documents\visual studio 2012\Projects\Estate_Server\Estate_Server
 c:\users\admin\documents\visual studio 2012\Projects\Estate_Server\Estate_Server\obj\Debug\Estate_Server.csprojResolveAssemblyReference.cache
 c:\users\admin\documents\visual studio 2012\Projects\Estate_Server\Estate_Server\obj\Debug\Estate_Server.dll
 c:\users\admin\documents\visual studio 2012\Projects\Estate_Server\Estate_Server\obj\Debug\Estate_Server.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\prog_wiz\Estate_Server\Estate_Server\obj\Debug\Estate_Server.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2012\Projects\prog_wiz\Estate_Server\Estate_Server\obj\Debug\Estate_Server.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\prog_wiz\Estate_Server\Estate_Server\bin\Debug\Estate_Server.dll.config
+C:\Users\admin\Documents\Visual Studio 2012\Projects\prog_wiz\Estate_Server\Estate_Server\bin\Debug\Estate_Server.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\prog_wiz\Estate_Server\Estate_Server\bin\Debug\Estate_Server.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\prog_wiz\Estate_Server\Estate_Server\obj\Debug\Estate_Server.pdb

@@ -5,7 +5,7 @@
         ResizeMode="CanMinimize">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="504">
-            <TabItem Header="Property">
+            <TabItem x:Name="propertyDetailsTab" Header="Property">
                 <Grid Background="#FFE5E5E5" Width="494" Margin="0,0,0,-1">
                     <StackPanel HorizontalAlignment="Left" Height="112" Margin="10,207,0,0" VerticalAlignment="Top" Width="474">
                         <TextBox HorizontalAlignment="Left" Height="112" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" IsReadOnly="True" />
@@ -16,7 +16,7 @@
                     <TextBlock x:Name="idText" HorizontalAlignment="Left" Margin="383,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
                 </Grid>
             </TabItem>
-            <TabItem Header="Agent">
+            <TabItem x:Name="agentDetailsTab" Header="Agent">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>

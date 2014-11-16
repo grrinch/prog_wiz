@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,12 @@ namespace EstateSearchClient
         public PropertyDetails()
         {
             InitializeComponent();
+        }
+
+        public void setDetails(DataTable property) 
+        {
+            DataRow dr = property.Rows[0];
+            idText.Text = dr["EstateId"].ToString();
         }
     }
 }

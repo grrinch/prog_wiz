@@ -38,7 +38,12 @@ namespace EstateSearchClient
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var propertyDetails = new PropertyDetails();
-            propertyDetails.Show();
+            DataRow dr = (DataRow) ggrrr.SelectedItem;
+            Int32 id = Int32.Parse(dr["ID"].ToString());
+
+            getDetailsForPopup(propertyDetails, id);
+
+            propertyDetails.ShowDialog();
         }
 
         private void getAllButton_Click(object sender, RoutedEventArgs e)
@@ -46,12 +51,11 @@ namespace EstateSearchClient
             getDD();
         }
 
-        private async void getBB()
+        private async void getDetailsForPopup(PropertyDetails popup, Int32 id)
         {
-            //Est.EstateClient client = new Est.EstateClient();
+            DataTable property = XmlStringToDataTable(await cl.GetAllEstatesAsync());
 
-            //DataTable tab = await client.GetAllEstatesAsync();
-            //ggrrr.DataContext = tab.DefaultView;
+            popup.setDetails(property);
         }
 
         private async void getDD()
